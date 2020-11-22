@@ -18,7 +18,7 @@ router.get('/',(req, res, next) => {
     // passing adminData.products to shop.pug 
     // and rendering shop.pug for incoming requests
     const products = adminData.products
-    res.render('shop', {prods: products, docTitle: 'Shop'})
+    res.render('shop', {prods: products, pageTitle: 'Shop', path: '/'})
 })
 
 // exports
