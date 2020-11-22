@@ -30,9 +30,9 @@ app.use(express.static(path.join(__dirname,'public')))
 app.use('/admin',adminData.routes)
 app.use(shopRoutes)
 
-// setting a route to 404.html
+// setting a route to 404.pug
 app.use('/',(req, res, next)=>{
-    res.status(404).sendFile(path.join(rootDir,'views','404.html'))
+    res.status(404).render('404')
 })
 
 // event listener
