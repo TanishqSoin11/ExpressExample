@@ -30,9 +30,9 @@ app.use(express.static(path.join(__dirname,'public')))
 app.use('/admin',adminData.routes)
 app.use(shopRoutes)
 
-// setting a route to 404.pug
+// setting a route to 404.ejs
 app.use('/',(req, res, next)=>{
-    res.status(404).render('404', {pageTitle: 'Page Not Found'})
+    res.status(404).render('404', {pageTitle: 'Page Not Found', path: '/'})
 })
 
 // event listener
