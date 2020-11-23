@@ -12,8 +12,8 @@ const rootDir= require('./util/path')
 // creating express() object
 const app = express();
 
-// Setting Templating engine => pug
-app.set('view engine', 'pug')
+// Setting Templating engine => ejs
+app.set('view engine', 'ejs')
 app.set('views','views')
 
 // importing routes
