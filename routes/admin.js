@@ -4,7 +4,7 @@ const path = require('path')
 // imorting express
 const express = require('express')
 
-const productsController = require('../controllers/products')
+const adminController = require('../controllers/admin')
 
 // creating an express router object
 const router = express.Router()
@@ -12,10 +12,13 @@ const router = express.Router()
 
 
 // /admin/add-product => GET
-router.get('/add-product',productsController.getAddProduct)
+router.get('/add-product', adminController.getAddProduct)
+
+// /admin/products => GET
+router.get('/products', adminController.getProducts)
 
 // /admin/add-product => POST
-router.post('/product', productsController.postAddProduct)
+router.post('/product', adminController.postAddProduct)
 
 // exports
 module.exports = router
