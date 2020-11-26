@@ -1,5 +1,4 @@
 // importing core modules
-const http = require('http');
 const path = require('path')
 
 //importing npm modules
