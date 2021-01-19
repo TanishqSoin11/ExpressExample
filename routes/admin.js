@@ -1,22 +1,22 @@
-// importing core modules
-const path = require("path");
+const path = require('path');
 
-// imorting express
-const express = require("express");
+const express = require('express');
 
-const adminController = require("../controllers/admin");
+const adminController = require('../controllers/admin');
 
-// creating an express router object
 const router = express.Router();
 
 // /admin/add-product => GET
-router.get("/add-product", adminController.getAddProduct);
+router.get('/add-product', adminController.getAddProduct);
 
 // /admin/products => GET
-router.get("/products", adminController.getProducts);
+router.get('/products', adminController.getProducts);
 
 // /admin/add-product => POST
-router.post("/product", adminController.postAddProduct);
+router.post('/add-product', adminController.postAddProduct);
 
-// exports
+router.get('/edit-product/:productId', adminController.getEditProduct);
+
+router.post('/edit-product', adminController.postEditProduct);
+
 module.exports = router;
